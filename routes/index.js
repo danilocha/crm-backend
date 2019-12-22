@@ -63,11 +63,7 @@ module.exports = () => {
   );
 
   //Busqueda de productos
-  router.post(
-    "/productos/busqueda/:query",
-    auth,
-    productosController.buscarProducto
-  );
+  router.post("/productos/busqueda/:query", productosController.buscarProducto);
   /** PEDIDOS!!! */
   // Agregar nuevos pedidos
   router.post("/pedidos/nuevo/:idUsuario", auth, pedidosController.nuevoPedido);
